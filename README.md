@@ -2,11 +2,11 @@
 
 ## Installation
 
-    npm install grunt-language-task
-    
-... or Clone this repository
-
     git clone git@github.com:henriquebf/grunt-language-task.git
+    
+or
+
+    npm install grunt-language-task    
     
 ## Settings
 
