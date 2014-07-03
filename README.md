@@ -13,15 +13,17 @@
 You must input the language locales that are required to be checked and the source path where the files are localed.
 
     language_task: {
-      options: {
-        languages: [
-          "de",
-          "en",
-          "pt"
-        ]
-      },
-      files: {
-        src: ['test/fixtures/*.json']
+      default_options: {
+        options: {
+          languages: [
+            "de",
+            "en",
+            "pt"
+          ]
+        },
+        files: {
+          src: ['test/fixtures/*.json']
+        }
       }
     }
     

@@ -33,15 +33,17 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     language_task: {
-      options: {
-        languages: [
-          "de",
-          "en",
-          "pt"
-        ]
-      },
-      files: {
-        src: ['test/fixtures/*.json']
+      default_options: {
+        options: {
+          languages: [
+            "de",
+            "en",
+            "pt"
+          ]
+        },
+        files: {
+          src: ['test/fixtures/*.json']
+        }
       }
     },
 
