@@ -38,20 +38,21 @@ Tasks.prototype.validate = function (arrayLanguages) {
     arrayLanguages = self.rotateArray(arrayLanguages);
 
     // Check if language JSON file is present
-    arrayLanguages.forEach(function (locale) {
+    for (var i=1; i<arrayLanguages.length; i++) {
+      var locale = arrayLanguages[i];
       if (!self.content[locale]) {
         isValid = false;
         self.arrayErrors.push('Missing file ' + locale + '.json.');
       }
-    });
+    }
 
     // Iterate First Object (and check if the others also have content)
     for (var key_first in self.content[arrayLanguages[0]]) {
       for (var key_second in self.content[arrayLanguages[0]][key_first]) {      
-        for (var i=1; i<arrayLanguages.length; i++) {
-          if(self.content[arrayLanguages[i]][key_first][key_second] === undefined) {
+        for (var j=1; j<arrayLanguages.length; j++) {
+          if(self.content[arrayLanguages[j]][key_first][key_second] === undefined) {
             isValid = false;
-            self.arrayErrors.push('Missing content for "' + key_first + ' : ' + key_second + '" for locale "' + arrayLanguages[i] + '".');
+            self.arrayErrors.push('Missing content for "' + key_first + ' : ' + key_second + '" for locale "' + arrayLanguages[j] + '".');
           }
         }
       }
@@ -62,7 +63,7 @@ Tasks.prototype.validate = function (arrayLanguages) {
   // Remove duplicated error messages
   self.arrayErrors = self.removeDuplicatedElements(self.arrayErrors);
 
-  return isValid
+  return isValid;
 
 };
 
@@ -104,7 +105,7 @@ Tasks.prototype.getLocaleFromFilepath = function (filepath) {
 
 module.exports = function (grunt) {
 
-  var LanguageTask = new Tasks;
+  var LanguageTask = new Tasks();
 
   grunt.registerMultiTask('language_task', 'An amazing Grunt Module to verify language JSON files before deployment', function () {
 

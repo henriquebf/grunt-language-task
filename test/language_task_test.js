@@ -23,5 +23,8 @@ var grunt = require('grunt');
 */
 
 exports.language_task = {
-
+  setUp: function (done) {
+    // setup here if necessary
+    done();
+  }
 };
