@@ -50,7 +50,10 @@ Tasks.prototype.validate = function (arrayLanguages) {
     for (var key_first in self.content[arrayLanguages[0]]) {
       for (var key_second in self.content[arrayLanguages[0]][key_first]) {      
         for (var j=1; j<arrayLanguages.length; j++) {
-          if(self.content[arrayLanguages[j]][key_first][key_second] === undefined) {
+          if (self.content[arrayLanguages[j]][key_first] === undefined) {
+            isValid = false;
+            self.arrayErrors.push('Missing content for "' + key_first + '" for locale "' + arrayLanguages[j] + '".');
+          } else if (self.content[arrayLanguages[j]][key_first][key_second] === undefined) {
             isValid = false;
             self.arrayErrors.push('Missing content for "' + key_first + ' : ' + key_second + '" for locale "' + arrayLanguages[j] + '".');
           }
