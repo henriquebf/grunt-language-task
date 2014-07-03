@@ -45,7 +45,7 @@ Tasks.prototype.validate = function (arrayLanguages) {
       }
     });
 
-    // Iterate First Objects (and check the others)
+    // Iterate First Object (and check if the others also have content)
     for (var key_first in self.content[arrayLanguages[0]]) {
       for (var key_second in self.content[arrayLanguages[0]][key_first]) {      
         for (var i=1; i<arrayLanguages.length; i++) {
