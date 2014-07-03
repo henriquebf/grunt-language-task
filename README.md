@@ -10,6 +10,8 @@
     
 ## Settings
 
+You must input the language locales that are required to be checked and the source path where the files are localed.
+
     language_task: {
       options: {
         languages: [
@@ -24,6 +26,8 @@
     }
     
 ## Executing
+
+It will output the missing fields for each language and stop the grunt flow.
 
     grunt language_task
     
