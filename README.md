@@ -39,6 +39,6 @@ It will output the missing fields for each language and stop the grunt flow.
     
 ## Tests
 
-It will run JSHint and Nodeunit tests
+It will run JSHint and Unit tests
 
     grunt

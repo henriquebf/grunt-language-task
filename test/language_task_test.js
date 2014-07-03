@@ -38,5 +38,5 @@ exports.language_task = {
     test.expect(1);
     test.equal(grunt.file.read('test/expected/result'), '', 'should be empty');
     test.done();
-  },
+  }
 };
