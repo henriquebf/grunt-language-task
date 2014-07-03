@@ -5,6 +5,8 @@ Grunt Task for validating multiple JSON language files. It will throw an excepti
 ## Installation
 
     git clone git@github.com:henriquebf/grunt-language-task.git
+
+    sudo npm install
     
 or
 
