@@ -34,7 +34,7 @@ exports.language_task = {
     // setup here if necessary
     done();
   },
-  'default': function(test) {
+  'default_options': function(test) {
     test.expect(1);
     test.equal(grunt.file.read('test/expected/result'), '', 'should be empty');
     test.done();
