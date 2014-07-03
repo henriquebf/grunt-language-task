@@ -128,8 +128,11 @@ module.exports = function (grunt) {
         LanguageTask.arrayErrors.forEach(function (message) {
           grunt.log.warn(message);
         });
-        grunt.fail.warn("Validation Failed!");
+        grunt.fail.warn('Validation Failed!');
       }
+
+      // Write file for tests
+      grunt.file.write('test/expected/result', LanguageTask.arrayErrors);
 
     });
 
