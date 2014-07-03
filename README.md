@@ -1,5 +1,7 @@
 # Grunt Language Validation
 
+Grunt Task for validating multiple JSON language files. It will throw an exception and display the Object and the following language that's missing content.
+
 ## Installation
 
     git clone git@github.com:henriquebf/grunt-language-task.git
