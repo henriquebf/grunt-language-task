@@ -31,8 +31,10 @@ You must input the language locales that are required to be checked and the sour
 
 It will output the missing fields for each language and stop the grunt flow.
 
-    grunt language_task
+    grunt language_task:default_options
     
 ## Tests
 
-    grunt test
+It will run JSHint and Nodeunit tests
+
+    grunt

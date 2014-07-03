@@ -1,3 +1,10 @@
+//
+// grunt-language-task
+// https://github.com/henriquebf/grunt-language-task
+//
+// by Henrique Ferreira
+//
+
 'use strict';
 
 var grunt = require('grunt');

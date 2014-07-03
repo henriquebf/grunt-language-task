@@ -1,10 +1,9 @@
-/*
- * grunt-language-task
- * https://github.com/henriquebf/grunt-language-task
- *
- * Copyright (c) 2014 Henrique Ferreira
- * Licensed under the MIT license.
- */
+//
+// grunt-language-task
+// https://github.com/henriquebf/grunt-language-task
+//
+// by Henrique Ferreira
+//
 
 'use strict';
 
@@ -59,7 +58,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'language_task', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'language_task:default_options', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
