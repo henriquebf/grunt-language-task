@@ -1,0 +1,18 @@
+{
+	"views/tour/Tooltip": {
+		"label_after": "Depois",
+		"label_elevation": "Elevação",
+		"label_waytype": "Tipo de Caminho",
+		"label_surface": "Superfície"
+	},
+	"views/tour/Values": {
+		"tooltip_duration": "Duração em %{speed}",
+		"tooltip_distance": "Distância",
+		"tooltip_uphill": "Subida",
+		"tooltip_downhill": "Descida"
+	},
+	"views/waypoint/HighlightButton": {
+		"tooltip_save": "Destaques neste lugar",
+		"tooltip_saved": "Você destacou neste lugar"
+	}
+}

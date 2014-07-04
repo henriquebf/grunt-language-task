@@ -1,6 +1,6 @@
 {
   "name": "grunt-language-task",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An amazing Grunt Module to verify language JSON files before deployment",
   "homepage": "https://github.com/henriquebf/grunt-language-task",
   "repository": "https://github.com/henriquebf/grunt-language-task",

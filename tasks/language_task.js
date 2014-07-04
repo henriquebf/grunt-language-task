@@ -16,7 +16,8 @@ function Tasks () {
     languages: [
       "de",
       "en"
-    ]
+    ],
+    continue_on_error: false
   };
 
   // Bootstrap variables
@@ -131,7 +132,11 @@ module.exports = function (grunt) {
         LanguageTask.arrayErrors.forEach(function (message) {
           grunt.log.warn(message);
         });
-        grunt.fail.warn('Validation Failed!');
+        if (options.continue_on_error) {
+          grunt.log.warn('Validation Failed!');
+        } else {
+          grunt.fail.warn('Validation Failed!');
+        }
       }
 
       // Write file for tests

@@ -34,9 +34,9 @@ exports.language_task = {
     // setup here if necessary
     done();
   },
-  'default_options': function(test) {
+  test_options: function(test) {
     test.expect(1);
-    test.equal(grunt.file.read('test/expected/result'), '', 'should be empty');
+    test.equal(grunt.file.read('test/expected/result'), 'Missing content for "views/tour/Values : tooltip_downhill" for locale "de".', 'should display an error');
     test.done();
   }
 };

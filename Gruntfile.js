@@ -43,6 +43,19 @@ module.exports = function (grunt) {
         files: {
           src: ['test/fixtures/*.json']
         }
+      },
+      test_options: {
+        options: {
+          languages: [
+            "de",
+            "en",
+            "pt"
+          ],
+          continue_on_error: true
+        },
+        files: {
+          src: ['test/error/*.json']
+        }
       }
     },
 
@@ -58,7 +71,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'language_task:default_options', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'language_task', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
